@@ -31,24 +31,27 @@ public class Conversation {
             String [] splitAnswer = answer.split(" "); 
             transcript.add(answer); 
 
-        // filters through the split responses and mirrors the words
+        // filters through the split responses and mirrors the words  
             for(int j=0; j< splitAnswer.length; j++){
                 if (splitAnswer[j].equals ("I")){
-                    splitAnswer[j] = "You"; 
+                    splitAnswer[j] = "you"; 
                 }
-                if (splitAnswer[j].equals ("me")){
+                else if (splitAnswer[j].equals ("me")){
                     splitAnswer[j] = "you";
                 }
-                if (splitAnswer[j].equals ("am")){
+                else if (splitAnswer[j].equals ("am")){
                     splitAnswer[j] = "are";
                 }
-               if (splitAnswer[j].equals ("you")){
+                else if (splitAnswer[j].equals ("are")){
+                    splitAnswer[j] = "am";
+                }
+                else if (splitAnswer[j].equals ("you")){
                     splitAnswer[j] = "I";
                 }
-               if (splitAnswer[j].equals ("my")){
+                else if (splitAnswer[j].equals ("my")){
                     splitAnswer[j] = "your";
                 }
-                if (splitAnswer[j].equals ("your")){
+                else if (splitAnswer[j].equals ("your")){
                     splitAnswer[j] = "my";
                 }
             }
