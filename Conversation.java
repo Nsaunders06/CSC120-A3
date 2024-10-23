@@ -31,7 +31,7 @@ public class Conversation {
             String [] splitAnswer = answer.split(" "); 
             transcript.add(answer); 
 
-        // filters through the split responses and mirrors the words  
+        // filters through the split responses and mirrors the words
             for(int j=0; j< splitAnswer.length; j++){
                 if (splitAnswer[j].equals ("I")){
                     splitAnswer[j] = "You"; 
@@ -42,10 +42,10 @@ public class Conversation {
                 if (splitAnswer[j].equals ("am")){
                     splitAnswer[j] = "are";
                 }
-                if (splitAnswer[j].equals ("you")){
+               if (splitAnswer[j].equals ("you")){
                     splitAnswer[j] = "I";
                 }
-                if (splitAnswer[j].equals ("my")){
+               if (splitAnswer[j].equals ("my")){
                     splitAnswer[j] = "your";
                 }
                 if (splitAnswer[j].equals ("your")){
