@@ -6,7 +6,11 @@ public class Conversation {
     // attributes 
     // Number of rounds needed 
     public Integer rounds;  
-    
+
+/**
+ * Constructor for the conversation 
+ * @param arguments
+ */
     public static void main(String[] arguments) {
         // input Scanner 
         Scanner input = new Scanner(System.in);
